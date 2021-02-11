@@ -51,6 +51,14 @@ public class Groshev_pica_2PT {
 		price=price+0.70;
     }
     
+    UIManager.put("OptionPane.cancelButtonText", "Nevajag");
+    Object reply3 = JOptionPane.showInputDialog(null, "Izvēlaties mērces: ", "Mērces!",
+    JOptionPane.QUESTION_MESSAGE, null, new Object[] { "Tomātu mērce (0.25€)","BBQ mērce (0.25€)",
+    		"Ķiploku mērce (0.25€)","Sinepju mērce (0.25€)"}, "Mērces!");
+    if (reply3=="Tomātu mērce (0.25€)"||reply3=="BBQ mērce (0.25€)"||reply3=="Ķiploku mērce (0.25€)"||reply3=="Sinepju mērce (0.25€)") {
+		price=price+0.25;
+    }
+    
 JOptionPane.showMessageDialog(null, "Tagad jums vajag samaksat "+price+"€", "Cena!", JOptionPane.INFORMATION_MESSAGE);
 	}
 	public static void main(String[] args) {
