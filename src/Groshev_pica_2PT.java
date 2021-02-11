@@ -34,9 +34,25 @@ public class Groshev_pica_2PT {
 	    }else if (reply1=="Havaju Pica (7.50€/12.50€)" && reply==JOptionPane.NO_OPTION) {
 			price=price+12.50;
 	    }
-	    JOptionPane.showMessageDialog(null, "Tagad jums vajag samaksat "+price+"€", "Cena!", JOptionPane.INFORMATION_MESSAGE);
+    
+	UIManager.put("OptionPane.cancelButtonText", "Nevajag");
+    Object reply2 = JOptionPane.showInputDialog(null, "Izvēlaties dzeriens: ", "Dzeriens!",
+    JOptionPane.QUESTION_MESSAGE, null, new Object[] { "Cola 1,5l (1.95€)","Fanta 1,5l (1.95€)",
+    		"Sprite 1,5l (1.95€)","Cola zero 1,5l (1.95€)","Ūdens 0,5l (0.70€)"}, "Dzerieni!");
+    if (reply2=="Cola 1,5l (1.95€)") {
+		price=price+1.95;
+    }else if (reply2=="Fanta 1,5l (1.95€)") {
+		price=price+1.95;
+    }else if (reply2=="Sprite 1,5l (1.95€)") {
+		price=price+1.95;
+    }else if (reply2=="Cola zero 1,5l (1.95€)") {
+		price=price+1.95;
+    }else if (reply2=="Ūdens 0,5l (0.70€)") {
+		price=price+0.70;
+    }
+    
+JOptionPane.showMessageDialog(null, "Tagad jums vajag samaksat "+price+"€", "Cena!", JOptionPane.INFORMATION_MESSAGE);
 	}
-
 	public static void main(String[] args) {
 		 UIManager.put("OptionPane.background",new ColorUIResource(255,191,0));
 		 UIManager.put("Panel.background",new ColorUIResource(255,191,0));
