@@ -3,6 +3,39 @@ import javax.swing.UIManager;
 import javax.swing.plaf.ColorUIResource;
 
 public class Groshev_pica_2PT {
+	
+	public static void pizza_izv(double price) {
+	    Object reply1 = JOptionPane.showInputDialog(null, "Izvēlaties picu (30cm/50cm):", "Izvēlaties picu!",
+	    JOptionPane.QUESTION_MESSAGE, null, new Object[] { "Desu Pica (6€/11€)","Siera Pica (6€/11€)",
+	    		"Veģetārā Pica (5€/10€)","BBQ Pica (7.50€/12.50€)","Havaju Pica (7.50€/12.50€)"}, "Pica");
+	    
+		UIManager.put("OptionPane.yesButtonText", "30 cm");
+		UIManager.put("OptionPane.noButtonText", "50 cm");
+		
+		int reply = JOptionPane.showConfirmDialog(null, "Kads izmers?", "Izmers!", JOptionPane.YES_NO_OPTION);
+	    if (reply1=="Desu Pica (6€/11€)" && reply==JOptionPane.YES_OPTION) {
+			price=price+6;
+	    }else if (reply1=="Desu Pica (6€/11€)" && reply==JOptionPane.NO_OPTION) {
+			price=price+11;
+	    }else if (reply1=="Siera Pica (6€/11€)" && reply==JOptionPane.YES_OPTION) {
+			price=price+6;
+	    }else if (reply1=="Siera Pica (6€/11€)" && reply==JOptionPane.NO_OPTION) {
+			price=price+11;
+	    }else if (reply1=="Veģetārā Pica (5€/10€)" && reply==JOptionPane.YES_OPTION) {
+			price=price+5;
+	    }else if (reply1=="Veģetārā Pica (5€/10€)" && reply==JOptionPane.NO_OPTION) {
+			price=price+10;
+	    }else if (reply1=="BBQ Pica (7.50€/12.50€)" && reply==JOptionPane.YES_OPTION) {
+			price=price+7.50;
+	    }else if (reply1=="BBQ Pica (7.50€/12.50€)" && reply==JOptionPane.NO_OPTION) {
+			price=price+12.50;
+	    }else if (reply1=="Havaju Pica (7.50€/12.50€)" && reply==JOptionPane.YES_OPTION) {
+			price=price+12.50;
+	    }else if (reply1=="Havaju Pica (7.50€/12.50€)" && reply==JOptionPane.NO_OPTION) {
+			price=price+12.50;
+	    }
+	    JOptionPane.showMessageDialog(null, "Tagad jums vajag samaksat "+price+"€", "Cena!", JOptionPane.INFORMATION_MESSAGE);
+	}
 
 	public static void main(String[] args) {
 		 UIManager.put("OptionPane.background",new ColorUIResource(255,191,0));
@@ -15,7 +48,7 @@ public class Groshev_pica_2PT {
 			switch(izvele){
 			
 			case JOptionPane.YES_OPTION:
-
+				pizza_izv(0);
 			break;
 			
 			case JOptionPane.NO_OPTION:
