@@ -12,6 +12,8 @@ public class Groshev_pica_2PT {
 		UIManager.put("OptionPane.yesButtonText", "30 cm");
 		UIManager.put("OptionPane.noButtonText", "50 cm");
 		
+		int help=1;
+		
 		int reply = JOptionPane.showConfirmDialog(null, "Kads izmers?", "Izmers!", JOptionPane.YES_NO_OPTION);
 	    if (reply1=="Desu Pica (6€/11€)" && reply==JOptionPane.YES_OPTION) {
 			price=price+6;
@@ -59,15 +61,35 @@ public class Groshev_pica_2PT {
 		price=price+0.25;
     }
     
-    UIManager.put("OptionPane.yesButtonText", "Jā");
+	UIManager.put("OptionPane.yesButtonText", "Jā");
 	UIManager.put("OptionPane.noButtonText", "Nē");
     int vel = JOptionPane.showConfirmDialog(null, "Vai Jūs grībat vel kaut ko nopirkt?", "Vel!", JOptionPane.YES_NO_OPTION);
     if (vel==JOptionPane.YES_OPTION) {
     	pizza_izv(price);
+    	help=1;
     }else if (vel==JOptionPane.NO_OPTION) {
         JOptionPane.showMessageDialog(null, "Tagad jums vajag samaksat "+price+"€", "Cena!", JOptionPane.INFORMATION_MESSAGE);
+        help=0;}
+    if (help==0) {
+    pieg(price);}
 }
-    
+	public static void pieg(double price) {
+		UIManager.put("OptionPane.yesButtonText", "Vajag");
+		UIManager.put("OptionPane.noButtonText", "Nevajag");
+		UIManager.put("OptionPane.cancelButtonText", "Apturēt programmu");
+
+		int piegade = JOptionPane.showConfirmDialog(null, "Piegade? Maksa par piegādi Liepājas pilsētā ir 2 EUR."
+		+"Ja pasūtījuma maksa ir virs 20 EUR, piegāde Liepājas pilsētā BEZMAKSAS.", "Piegade!", JOptionPane.YES_NO_CANCEL_OPTION);
+		if (piegade == JOptionPane.YES_OPTION){
+			if(price>20) {
+				JOptionPane.showMessageDialog(null, "Bezmaksa piegade!", "Apsveicu :3", JOptionPane.INFORMATION_MESSAGE);
+			}else {
+				price=price+2;
+		        JOptionPane.showMessageDialog(null, "Ar piegade jums vajag samaksat "+price+"€", "Cena ar piegade!", JOptionPane.INFORMATION_MESSAGE);
+}
+		 }
+			if (piegade == JOptionPane.NO_OPTION){
+			}
 	}
 	public static void main(String[] args) {
 		 UIManager.put("OptionPane.background",new ColorUIResource(255,191,0));
