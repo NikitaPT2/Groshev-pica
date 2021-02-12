@@ -85,8 +85,8 @@ public class Groshev_pica_2PT{
 				JOptionPane.showMessageDialog(null, "Bezmaksa piegade!", "Apsveicu :3", JOptionPane.INFORMATION_MESSAGE);
 			}else {
 				price=price+2;
-		        JOptionPane.showMessageDialog(null, "Ar piegade jums vajag samaksat "+price+"€", "Cena ar piegade!", JOptionPane.INFORMATION_MESSAGE);
-		        majas();}
+		        JOptionPane.showMessageDialog(null, "Ar piegade jums vajag samaksat "+price+"€", "Cena ar piegade!", JOptionPane.INFORMATION_MESSAGE);}
+		        majas();
 		 }
 			if (piegade == JOptionPane.NO_OPTION){
 			uzvietas();
