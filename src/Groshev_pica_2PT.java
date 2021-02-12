@@ -59,7 +59,15 @@ public class Groshev_pica_2PT {
 		price=price+0.25;
     }
     
-JOptionPane.showMessageDialog(null, "Tagad jums vajag samaksat "+price+"€", "Cena!", JOptionPane.INFORMATION_MESSAGE);
+    UIManager.put("OptionPane.yesButtonText", "Jā");
+	UIManager.put("OptionPane.noButtonText", "Nē");
+    int vel = JOptionPane.showConfirmDialog(null, "Vai Jūs grībat vel kaut ko nopirkt?", "Vel!", JOptionPane.YES_NO_OPTION);
+    if (vel==JOptionPane.YES_OPTION) {
+    	pizza_izv(price);
+    }else if (vel==JOptionPane.NO_OPTION) {
+        JOptionPane.showMessageDialog(null, "Tagad jums vajag samaksat "+price+"€", "Cena!", JOptionPane.INFORMATION_MESSAGE);
+}
+    
 	}
 	public static void main(String[] args) {
 		 UIManager.put("OptionPane.background",new ColorUIResource(255,191,0));
