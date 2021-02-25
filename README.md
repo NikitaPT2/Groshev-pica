@@ -1,6 +1,6 @@
 # :pizza: Nikita Gorshev - pica :pizza:
 
-###:floppy_disk: *Informācija par programmu* :floppy_disk:
+### :floppy_disk: *Informācija par programmu* :floppy_disk:
 
 Programma ir vajadzīga, lai viegli nopirkt picu. Programmā ir iespēja:
 
@@ -18,11 +18,11 @@ Programma ir vajadzīga, lai viegli nopirkt picu. Programmā ir iespēja:
 - [x]	Ievietot attēlus
 - [x]	Ievietot emoji
 - [x]	Ievietot uzdevumu saraksts
-- []	Veikt izstrādātās picērijas programmas izgrūšanu (push) uz GitHub krātuvi
-- []	Izgrūžot iekļaut visus projekta zarus (branch) un visus projekta failus
-- []	Lokāli programmu papildināt ar nelielu jaunu funkcionalitāti
-- []	Atkārtoti veikt izgrūšanu uz GitHub krātuvi
-- []	Izveidot prezentāciju, kurā dokumentēta uzdevumu izpildes gaita
+- [ ]	Veikt izstrādātās picērijas programmas izgrūšanu (push) uz GitHub krātuvi
+- [ ]	Izgrūžot iekļaut visus projekta zarus (branch) un visus projekta failus
+- [ ]	Lokāli programmu papildināt ar nelielu jaunu funkcionalitāti
+- [ ]	Atkārtoti veikt izgrūšanu uz GitHub krātuvi
+- [ ]	Izveidot prezentāciju, kurā dokumentēta uzdevumu izpildes gaita
 
 <img src="https://www.pizzashop.lv/images/small/dzeku.jpg" width="200">
 
