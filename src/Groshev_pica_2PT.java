@@ -108,6 +108,11 @@ public class Groshev_pica_2PT{
         JOptionPane.showMessageDialog(null, "Informacija : \n Uzvards: "+uzvards+
         	"\n Talrunis: "+talruni+"\n Pienāciet pēc viena stunda, lai saņemtu picu!!");
 		}
+		
+		public static void info(){
+	        JOptionPane.showMessageDialog(null, "Pirmdiena - Svētdiena: 11:00 - 22:00 \nE-pasts: groshev.pizza@inbox.lv \nPicerijas adrese: Kuršu iela 30, Liepāja\n" + 
+	        		"Pasūtījumi tiek pieņemti katru dienu līdz plkst. 21:30", null, JOptionPane.INFORMATION_MESSAGE);
+		}
 	
 	public static void main(String[] args){
 		 UIManager.put("OptionPane.background",new ColorUIResource(255,191,0));
@@ -116,13 +121,14 @@ public class Groshev_pica_2PT{
 		do{
 			UIManager.put("OptionPane.yesButtonText", "Jā");
 			UIManager.put("OptionPane.noButtonText", "Nē, apturēt programmu");
-			
-		    UIManager.put("OptionPane.cancelButtonText", "Atcelt!");
-			izvele = JOptionPane.showConfirmDialog(null, "Vai Jūs grībat nopirkt picu?", "Pica!", JOptionPane.YES_NO_OPTION);
+		    UIManager.put("OptionPane.cancelButtonText", "Informacija par mums");
+			izvele = JOptionPane.showConfirmDialog(null, "Vai Jūs grībat nopirkt picu?", "Pica!", JOptionPane.YES_NO_CANCEL_OPTION);
 			switch(izvele){
 			
 			case JOptionPane.YES_OPTION:
+			    UIManager.put("OptionPane.cancelButtonText", "Atcelt!");
 				pizza_izv(0);
+				
 		        JOptionPane.showMessageDialog(null, "Paldies par pirkumu, programma tiek apturēta!");
 		        apturet = 1;
 			break;
@@ -131,6 +137,10 @@ public class Groshev_pica_2PT{
 				 JOptionPane.showMessageDialog(null, "Programma tiek apturēta!", "Brdīdinājums!", JOptionPane.WARNING_MESSAGE);
 					apturet = 1;
 			break;
+			
+			case JOptionPane.CANCEL_OPTION:
+				info();
+		    break;
 			
 			default:
 				JOptionPane.showMessageDialog(null, "Darbība nepastāv!", "Kļūda!", JOptionPane.ERROR_MESSAGE);
