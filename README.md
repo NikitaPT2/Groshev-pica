@@ -18,11 +18,11 @@ Programma ir vajadzīga, lai viegli nopirkt picu. Programmā ir iespēja:
 - [x]	Ievietot attēlus
 - [x]	Ievietot emoji
 - [x]	Ievietot uzdevumu saraksts
-- [ ]	Veikt izstrādātās picērijas programmas izgrūšanu (push) uz GitHub krātuvi
-- [ ]	Izgrūžot iekļaut visus projekta zarus (branch) un visus projekta failus
-- [ ]	Lokāli programmu papildināt ar nelielu jaunu funkcionalitāti
-- [ ]	Atkārtoti veikt izgrūšanu uz GitHub krātuvi
-- [ ]	Izveidot prezentāciju, kurā dokumentēta uzdevumu izpildes gaita
+- [x]	Veikt izstrādātās picērijas programmas izgrūšanu (push) uz GitHub krātuvi
+- [x]	Izgrūžot iekļaut visus projekta zarus (branch) un visus projekta failus
+- [x]	Lokāli programmu papildināt ar nelielu jaunu funkcionalitāti
+- [x]	Atkārtoti veikt izgrūšanu uz GitHub krātuvi
+- [x]	Izveidot prezentāciju, kurā dokumentēta uzdevumu izpildes gaita
 
 <img src="https://www.pizzashop.lv/images/small/dzeku.jpg" width="200">
 
