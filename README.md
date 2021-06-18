@@ -1,6 +1,6 @@
 # :pizza: Nikita Gorshev - pica :pizza:
 
-### :floppy_disk: *Informācija par programmu* :floppy_disk:
+## :floppy_disk: *Informācija par programmu* :floppy_disk:
 
 Programma ir vajadzīga, lai viegli nopirkt picu. Programmā ir iespēja:
 
